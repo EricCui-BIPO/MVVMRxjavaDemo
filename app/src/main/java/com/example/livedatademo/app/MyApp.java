@@ -10,6 +10,11 @@ public class MyApp extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        if (Utils.isAppDebug()){
+            ARouter.openDebug();
+            ARouter.openLog();
+        }
+        ARouter.init(this);
     }
 
 }
