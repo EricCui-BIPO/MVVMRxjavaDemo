@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvvmlibrary.observer.FragmentLifecycleObserver;
-import com.example.mvvmlibrary.widget.loading.ProgressLoadingDialog;
 import com.example.mvvmlibrary.widget.loadingdrawable.LoadingDialog;
 import com.example.networkrequest.base.BaseActionEvent;
 import com.example.networkrequest.utils.ToastUtil;
@@ -22,7 +21,7 @@ import java.util.List;
 public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
 
     protected T viewModel;
-    public LoadingDialog loadingDialog;
+    public LoadingDialog loadingDialog = null;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -99,6 +98,7 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
     protected void dismissLoading() {
         if (loadingDialog != null && loadingDialog.isShowing()) {
             loadingDialog.dismiss();
+            loadingDialog = null;
         }
     }
 

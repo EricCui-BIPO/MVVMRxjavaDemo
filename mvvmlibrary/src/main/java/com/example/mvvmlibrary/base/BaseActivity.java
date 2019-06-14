@@ -19,7 +19,8 @@ public abstract class BaseActivity<T extends BaseViewModel> extends AppCompatAct
     protected T viewModel;
 
     protected abstract T getViewModel();
-    public LoadingDialog loadingDialog;
+
+    public LoadingDialog loadingDialog = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -92,18 +93,21 @@ public abstract class BaseActivity<T extends BaseViewModel> extends AppCompatAct
     }
 
     protected void showLoading() {
-        if (loadingDialog == null) {
+
+        if(loadingDialog == null) {
             loadingDialog = new LoadingDialog.Builder(this)
-            .setCancelOutside(false)
-            .setCancelable(false)
-            .create();
+                    .setCancelOutside(false)
+                    .setCancelable(false)
+                    .create();
             loadingDialog.show();
         }
+
     }
 
     protected void dismissLoading() {
         if (loadingDialog != null && loadingDialog.isShowing()) {
             loadingDialog.dismiss();
+            loadingDialog = null;
         }
     }
 }

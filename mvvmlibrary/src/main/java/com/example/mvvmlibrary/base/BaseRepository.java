@@ -21,6 +21,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 
@@ -152,12 +153,24 @@ public abstract class BaseRepository{
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .unsubscribeOn(AndroidSchedulers.mainThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnSubscribe(disposable -> showLoading())
-                .doFinally((Action) () -> {
-                    if (isDismiss) {
-                        dismissLoading();
+//                .doOnSubscribe(disposable -> showLoading())
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        showLoading();
+                    }
+                })
+                .doFinally(new Action() {
+                    @Override
+                    public void run() throws Exception {
+                        if (isDismiss) {
+                            dismissLoading();
+                        }
                     }
                 });
+//                .doFinally((Action) () -> {
+//
+//                });
     }
 
     private <T> FlowableTransformer<T, T> loadingFlowableTransformer(boolean isDismiss) {
