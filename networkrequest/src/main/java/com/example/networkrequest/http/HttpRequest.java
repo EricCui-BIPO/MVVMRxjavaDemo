@@ -53,9 +53,9 @@ public class HttpRequest {
      * @return
      */
     public Retrofit createRetrofit(String baseUrl){
-        OkHttpClient.Builder builder = new OkHttpClient.Builder()
-                .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.MILLISECONDS)
-                .addInterceptor(new HeaderInterceptor());
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        builder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.MILLISECONDS);
+//        builder.addInterceptor(new HeaderInterceptor());
         //忽略证书
         builder.sslSocketFactory(SSLSocketClient.getSSLSocketFactory());
         builder.hostnameVerifier(SSLSocketClient.getHostnameVerifier());
@@ -87,7 +87,7 @@ public class HttpRequest {
                         .unsubscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .flatMap(result -> {
-                            if ("0" == result.getErrcode()){
+                            if ("0".equals(result.getErrcode())){
                                 return createData(result.getData());
                             } else {
                                 throw new ApiException(result.getErrcode(),result.getErrmsg());

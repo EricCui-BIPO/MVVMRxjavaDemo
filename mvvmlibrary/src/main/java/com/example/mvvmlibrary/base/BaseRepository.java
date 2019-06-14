@@ -90,7 +90,6 @@ public abstract class BaseRepository{
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .compose(applyObservableSchedulers())
-                .compose(RxLifecycle.bindUntilEvent(observable, ActivityEvent.DESTROY))
                 .compose(loadingTransformer(isDismiss))
                 .subscribeWith(observer);
         addDisposable(disposable);
@@ -108,7 +107,6 @@ public abstract class BaseRepository{
                         .subscribeOn(Schedulers.io())
                         .unsubscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .compose(RxLifecycle.bindUntilEvent(observable, ActivityEvent.DESTROY))
                         .compose(applyObservableSchedulers())
                         .subscribeWith(observer);
         addDisposable(disposable);

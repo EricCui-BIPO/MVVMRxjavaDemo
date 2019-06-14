@@ -3,6 +3,7 @@ package com.example.livedatademo.viewmodel;
 import android.app.Application;
 import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.example.livedatademo.repository.MainRepository;
 import com.example.mvvmlibrary.base.BaseViewModel;
@@ -24,19 +25,18 @@ public class MainViewModel extends BaseViewModel<MainRepository> {
     }
 
 
-
-
     //接口的请求数据以及回调
-    public void getUserInfo(String key) {
-        mRepository.requestData(key,new RequestMultiplyCallback<Boolean>() {
+    public void getUserInfo(String mobile) {
+        mRepository.requestData(mobile,new RequestMultiplyCallback<Boolean>() {
 
             @Override
             public void onFail(BaseException e) {
-
+                Log.e("aaa", "aaa");
             }
 
             @Override
             public void onSuccess(Boolean bean) {
+                Log.e("aaa", "bbb");
                 booleanLiveData.setValue(bean);
             }
         });

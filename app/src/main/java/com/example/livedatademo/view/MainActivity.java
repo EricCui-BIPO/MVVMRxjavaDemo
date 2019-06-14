@@ -14,6 +14,7 @@ import com.example.livedatademo.R;
 import com.example.livedatademo.event.MainEvent;
 import com.example.livedatademo.viewmodel.MainViewModel;
 import com.example.mvvmlibrary.base.BaseActivity;
+import com.example.mvvmlibrary.widget.loadingdrawable.LoadingDialog;
 import com.example.networkrequest.arouter.Constance;
 import com.example.networkrequest.liveeventbus.LiveEventBus;
 import com.example.networkrequest.utils.ToastUtil;
@@ -38,7 +39,8 @@ public class MainActivity extends BaseActivity<MainViewModel> {
         mainFragmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build(Constance.ACTIVITY_URL_SECOND).navigation();
+                viewModel.getUserInfo("17521316212");
+//                ARouter.getInstance().build(Constance.ACTIVITY_URL_SECOND).navigation();
             }
         });
 
@@ -49,6 +51,16 @@ public class MainActivity extends BaseActivity<MainViewModel> {
                 text.setText("Boolean");
             }
 
+        });
+
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new LoadingDialog.Builder(MainActivity.this)
+                        .setCancelOutside(false)
+                        .setCancelable(false)
+                        .create().show();
+            }
         });
     }
 
