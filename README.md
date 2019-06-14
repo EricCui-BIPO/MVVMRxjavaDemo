@@ -1,2 +1,2 @@
 # MVVMRxjavaDemo
-MVVM、RxJava2、LiveEventBus
+MVVM、RxJava2、LiveEventBus、Arouter
