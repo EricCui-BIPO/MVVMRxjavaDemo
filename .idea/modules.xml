@@ -4,8 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MvvmRxjavaDemo.iml" filepath="$PROJECT_DIR$/MvvmRxjavaDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvvmlibrary/mvvmlibrary.iml" filepath="$PROJECT_DIR$/mvvmlibrary/mvvmlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/networkrequest/networkrequest.iml" filepath="$PROJECT_DIR$/networkrequest/networkrequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/library_res/common-library_res.iml" filepath="$PROJECT_DIR$/common/library_res/common-library_res.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/mvvmlibrary/common-mvvmlibrary.iml" filepath="$PROJECT_DIR$/common/mvvmlibrary/common-mvvmlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/networkrequest/common-networkrequest.iml" filepath="$PROJECT_DIR$/common/networkrequest/common-networkrequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/widget/common-widget.iml" filepath="$PROJECT_DIR$/common/widget/common-widget.iml" />
     </modules>
   </component>
 </project>

@@ -1,1 +1,1 @@
-include ':app', ':networkrequest', ':mvvmlibrary'
+include ':app', ':common:networkrequest', ':common:mvvmlibrary', ':common:widget', ':common:library_res'
