@@ -1,2 +1,2 @@
 # MVVMRxjavaDemo
-MVVM、RxJava2、LiveEventBus、Arouter
+androidx包  MVVM、RxJava2、LiveEventBus、Arouter、Butterknife
