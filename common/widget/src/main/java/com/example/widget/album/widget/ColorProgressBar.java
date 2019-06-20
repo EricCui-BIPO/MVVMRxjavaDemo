@@ -18,9 +18,10 @@ package com.example.widget.album.widget;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
+
+import androidx.annotation.ColorInt;
 
 /**
  * Created by YanZhenjie on 2018/4/11.

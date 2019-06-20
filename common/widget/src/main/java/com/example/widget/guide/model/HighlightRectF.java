@@ -1,7 +1,7 @@
 package com.example.widget.guide.model;
 
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 /**

@@ -1,9 +1,10 @@
 package com.example.mvvmlibrary.base;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.MutableLiveData;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.networkrequest.base.BaseActionEvent;
 
@@ -14,6 +15,7 @@ public  class BaseViewModel<T extends BaseRepository> extends AndroidViewModel i
     private MutableLiveData<BaseActionEvent> actionLiveData;
     protected T mRepository;
 
+
     public BaseViewModel(@NonNull Application application) {
         super(application);
         mRepository = getRepository();
@@ -23,6 +25,7 @@ public  class BaseViewModel<T extends BaseRepository> extends AndroidViewModel i
     protected T getRepository() {
         return mRepository;
     }
+
 
     @Override
     public void showLoading() {

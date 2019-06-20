@@ -16,7 +16,7 @@
 package com.example.widget.album.api;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.example.widget.album.Action;
 import com.example.widget.album.api.widget.Widget;

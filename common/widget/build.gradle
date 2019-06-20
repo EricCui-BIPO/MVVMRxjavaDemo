@@ -10,7 +10,7 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
 
@@ -31,7 +31,7 @@ dependencies {
     api rootProject.ext.support["recyclerview-v7"]
     api rootProject.ext.support["cardview-v7"]
     api rootProject.ext.dependencies["glide"]
-    api rootProject.ext.dependencies["glide-compiler"]
     api rootProject.ext.dependencies["glide-integration"]
     api rootProject.ext.dependencies["mediascanner"]
+    api project(":common:library_res")
 }

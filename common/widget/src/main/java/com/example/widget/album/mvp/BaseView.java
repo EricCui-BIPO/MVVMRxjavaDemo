@@ -16,23 +16,22 @@
 package com.example.widget.album.mvp;
 
 import android.app.Activity;
-import android.arch.lifecycle.GenericLifecycleObserver;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleOwner;
+import androidx.lifecycle.GenericLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ArrayRes;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.StringRes;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.ArrayRes;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -42,6 +41,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.widget.R;
+import com.google.android.material.snackbar.Snackbar;
 
 
 /**
@@ -367,7 +367,7 @@ public abstract class BaseView<Presenter extends BasePresenter> {
         Snackbar snackbar = Snackbar.make(mSource.getView(), message, Snackbar.LENGTH_SHORT);
         View view = snackbar.getView();
         view.setBackgroundColor(getColor(R.color.albumColorPrimaryBlack));
-        TextView textView = view.findViewById(android.support.design.R.id.snackbar_text);
+        TextView textView = view.findViewById(R.id.snackbar_text);
         textView.setTextColor(Color.WHITE);
         snackbar.show();
     }
@@ -376,7 +376,7 @@ public abstract class BaseView<Presenter extends BasePresenter> {
         Snackbar snackbar = Snackbar.make(mSource.getView(), message, Snackbar.LENGTH_SHORT);
         View view = snackbar.getView();
         view.setBackgroundColor(getColor(R.color.albumColorPrimaryBlack));
-        TextView textView = view.findViewById(android.support.design.R.id.snackbar_text);
+        TextView textView = view.findViewById(R.id.snackbar_text);
         textView.setTextColor(Color.WHITE);
         snackbar.show();
     }

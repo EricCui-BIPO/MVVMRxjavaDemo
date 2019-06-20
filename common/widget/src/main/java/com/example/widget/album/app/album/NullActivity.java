@@ -17,8 +17,9 @@ package com.example.widget.album.app.album;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.example.widget.album.Action;
 import com.example.widget.album.Album;

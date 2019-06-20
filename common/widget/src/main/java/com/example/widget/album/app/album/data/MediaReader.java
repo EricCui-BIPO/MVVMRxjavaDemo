@@ -19,7 +19,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.WorkerThread;
 
 import com.example.widget.R;
 import com.example.widget.album.AlbumFile;

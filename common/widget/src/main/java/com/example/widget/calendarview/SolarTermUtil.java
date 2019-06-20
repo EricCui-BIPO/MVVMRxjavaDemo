@@ -17,6 +17,8 @@ package com.example.widget.calendarview;
 
 import android.content.Context;
 
+import com.example.widget.R;
+
 /**
  * http://www.cnblogs.com/moodlxs/archive/2010/12/18/2345392.html
  * 24节气计算公式，参考该博客实现

@@ -15,7 +15,7 @@
  */
 package com.example.widget.album.mvp;
 
-import android.arch.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LifecycleOwner;
 
 /**
  * <p>Presenter of MVP.</p>

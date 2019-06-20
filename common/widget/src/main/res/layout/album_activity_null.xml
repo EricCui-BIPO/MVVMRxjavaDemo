@@ -39,7 +39,7 @@
             style="@style/Album.WrapContent"
             android:textColor="@color/albumFontHint" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_camera_image"
             style="@style/Album.Button.WrapContent"
             android:layout_marginTop="@dimen/album_dp_15"
@@ -50,7 +50,7 @@
             android:text="@string/album_camera_image_capture"
             android:textColor="@color/albumFontLight" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_camera_video"
             style="@style/Album.Button.WrapContent"
             android:layout_marginTop="@dimen/album_dp_15"

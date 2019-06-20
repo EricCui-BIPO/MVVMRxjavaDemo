@@ -16,7 +16,7 @@
 package com.example.widget.album.api;
 
 import android.content.Context;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 
 
 import com.example.widget.album.ItemAction;

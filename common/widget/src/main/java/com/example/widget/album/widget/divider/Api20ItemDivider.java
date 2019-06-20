@@ -17,12 +17,13 @@ package com.example.widget.album.widget.divider;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.support.annotation.ColorInt;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+
+import androidx.annotation.ColorInt;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 /**
  * <p>The implementation of divider does not add dividers around the list.</p>

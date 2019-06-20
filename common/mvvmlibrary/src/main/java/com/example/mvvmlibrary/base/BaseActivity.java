@@ -1,12 +1,11 @@
 package com.example.mvvmlibrary.base;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModel;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mvvmlibrary.observer.ActivityLifecycleObserver;
-import com.example.mvvmlibrary.widget.loading.ProgressLoadingDialog;
 import com.example.mvvmlibrary.widget.loadingdrawable.LoadingDialog;
 import com.example.networkrequest.base.BaseActionEvent;
 import com.example.networkrequest.utils.ToastUtil;
@@ -88,7 +87,9 @@ public abstract class BaseActivity<T extends BaseViewModel> extends AppCompatAct
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        viewModel.mRepository.dispose();
+        if (viewModel.mRepository != null) {
+            viewModel.mRepository.dispose();
+        }
         dismissLoading();
     }
 

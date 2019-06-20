@@ -1,11 +1,11 @@
 package com.example.mvvmlibrary.base;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModel;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,6 +105,9 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        viewModel.mRepository.dispose();
+        dismissLoading();
+        if (viewModel.mRepository != null) {
+            viewModel.mRepository.dispose();
+        }
     }
 }

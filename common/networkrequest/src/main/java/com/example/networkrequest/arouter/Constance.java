@@ -2,7 +2,7 @@ package com.example.networkrequest.arouter;
 
 public class Constance {
 
-    public static final String ACTIVITY_URL_MAIN = "/activity/MainActivity";
-    public static final String ACTIVITY_URL_SECOND = "/activity/SecondActivity";
-    public static final String FRAGMENT_URL_MAIN = "/fragment/MainFragment";
+    public static final String ACTIVITY_URL_MAIN = "/main/MainActivity";
+    public static final String ACTIVITY_URL_LOGIN = "/login/LoginActivity";
+    public static final String ACTIVITY_URL_REGISTER = "/login/RegisterActivity";
 }

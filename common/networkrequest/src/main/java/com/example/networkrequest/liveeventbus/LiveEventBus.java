@@ -1,18 +1,19 @@
 package com.example.networkrequest.liveeventbus;
 
-import android.arch.lifecycle.ExternalLiveData;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.ExternalLiveData;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.MainThread;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import com.example.networkrequest.liveeventbus.ipc.IpcConst;
 import com.example.networkrequest.liveeventbus.ipc.encode.IEncoder;
@@ -386,7 +387,7 @@ public final class LiveEventBus {
             }
 
             @Override
-            public void removeObserver(@NonNull Observer<T> observer) {
+            public void removeObserver(@NonNull Observer<? super T> observer) {
                 super.removeObserver(observer);
                 if (autoClear && !liveData.hasObservers()) {
                     LiveEventBus.get().bus.remove(key);

@@ -8,12 +8,13 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Size;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
+
+import androidx.annotation.Size;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
 import com.example.mvvmlibrary.widget.loadingdrawable.DensityUtil;
 import com.example.mvvmlibrary.widget.loadingdrawable.render.LoadingRenderer;

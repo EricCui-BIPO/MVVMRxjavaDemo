@@ -15,7 +15,8 @@
  */
 package com.example.widget.album.widget.divider;
 
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>Divider of {@code RecyclerView}, you can get the width and height of the line.</p>

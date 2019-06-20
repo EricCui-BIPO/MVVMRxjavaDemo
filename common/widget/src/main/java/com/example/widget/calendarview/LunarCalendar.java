@@ -19,6 +19,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.example.widget.R;
+
 import java.util.HashMap;
 import java.util.Map;
 

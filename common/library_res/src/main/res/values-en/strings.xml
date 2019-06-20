@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="ExtraTranslation">
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="A_YZ47DN">Approve</string>
     <string name="A_V5E98T">The announcement does not exist</string>
     <string name="A_MMZRH9">We provide the professional HR services on the Workio platform to help you control risks, reduce costs and improve efficiency.</string>

@@ -1,6 +1,6 @@
 package com.example.mvvmlibrary.base;
 
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.networkrequest.base.BaseActionEvent;
 

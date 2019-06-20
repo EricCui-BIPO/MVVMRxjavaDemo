@@ -1,6 +1,6 @@
 package com.example.widget.guide.lifecycle;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.example.widget.guide.util.LogUtil;
 

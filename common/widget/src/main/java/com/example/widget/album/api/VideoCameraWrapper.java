@@ -17,7 +17,7 @@ package com.example.widget.album.api;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 
 import com.example.widget.album.Album;
 import com.example.widget.album.app.camera.CameraActivity;

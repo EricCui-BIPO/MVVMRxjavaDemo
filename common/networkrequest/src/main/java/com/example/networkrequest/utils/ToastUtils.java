@@ -2,10 +2,11 @@ package com.example.networkrequest.utils;
 
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.StringRes;
 import android.view.Gravity;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.StringRes;
 
 /**
  * Toast相关工具类
